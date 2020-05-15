@@ -8,6 +8,7 @@
 
 import React from "react";
 import Link from 'next/link';
+import Layout from '../../components/Layout'
 
 const PostLink = props => (
     <li>
@@ -19,12 +20,12 @@ const PostLink = props => (
 
 export default function Blog() {
     return (
-        <div>
+        <Layout title='列表'>
             <ul>
                 <PostLink id="hello-nextjs"/>
                 <PostLink id="learn-nextjs"/>
                 <PostLink id="deploy-nextjs"/>
             </ul>
-        </div>
+        </Layout>
     );
 }

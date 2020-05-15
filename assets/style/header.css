@@ -1,0 +1,25 @@
+.header {
+    background: #fff;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 99;
+}
+
+.header .left {
+    width: 220px;
+    text-align: center;
+}
+
+.header .left img {
+    height: 40px;
+}
+
+.header .center {
+    flex: 1;
+}
+
+.header .right {
+    width: 400px;
+}

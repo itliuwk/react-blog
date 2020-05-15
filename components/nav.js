@@ -7,13 +7,18 @@
  */
 import React,{Component} from "react";
 import {Button} from 'antd'
-
+import Link from 'next/link';
+import '../assets/style/nav.css'
 
 
 function Nav() {
     return (
-        <div>
-            <Button type="primary">Primary</Button>
+        <div className='nav'>
+            <Link href='/list'>
+                <a>
+                    <Button type='primary'>跳转list</Button>
+                </a>
+            </Link>
         </div>
     );
 }

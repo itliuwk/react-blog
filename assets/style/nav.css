@@ -1,0 +1,9 @@
+.nav{
+    width: 220px;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+    background-color: #fff;
+    z-index: 98;
+}
