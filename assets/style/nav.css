@@ -1,9 +1,9 @@
-.nav{
+.nav {
     width: 220px;
     position: fixed;
     height: 100%;
     overflow: hidden;
     margin-top: 50px;
-    background-color: #fff;
+    background-color: #f9f9f9;
     z-index: 98;
 }

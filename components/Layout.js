@@ -16,10 +16,16 @@ export default (props) => (
         <Header/>
         <Nav/>
         <div className='main'>
-            <div className={'left'}>
-                {props.children}
+            <div className='main-left'>
+                <div className='main-header'>
+                    <h4>随心</h4>
+                    <p>入我相思门，知我相思苦。</p>
+                </div>
+                <div className='content'>
+                    {props.children}
+                </div>
             </div>
-            <div className='right'>
+            <div className='main-right'>
                 <MainRight></MainRight>
             </div>
 
