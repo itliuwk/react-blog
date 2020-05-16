@@ -32,7 +32,7 @@ Detail.getInitialProps = async function (context) {
     const res = await fetch(`http://sxitw.cn:8000/api/classify/length`);
     const show = await res.json();
     return {
-        list: show.data,
+        list: [...show.data,...show.data,...show.data,...show.data,...show.data,...show.data],
         title:'详情'
     };
 };

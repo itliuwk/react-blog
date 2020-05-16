@@ -21,10 +21,10 @@ function Header() {
                 </Link>
             </div>
             <div className='center'>
-                left
+
             </div>
             <div className='right'>
-                left
+
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import 'antd/dist/antd.css'
+import '../assets/style/antd.min.css'
 import '../assets/style/reset.css'
 import Header from '../components/header'
 import Nav from '../components/nav'
@@ -18,8 +18,8 @@ export default (props) => (
         <div className='main'>
             <div className='main-left'>
                 <div className='main-header'>
-                    <h4>随心</h4>
-                    <p>入我相思门，知我相思苦。</p>
+                    <h4>随心博客</h4>
+                    <p>前端开发人员的个人博客，记录工作上，生活上的知识，并分享前端方面技术和一些生活趣事。</p>
                 </div>
                 <div className='content'>
                     {props.children}
@@ -30,6 +30,8 @@ export default (props) => (
             </div>
 
         </div>
+
+        {console.log(props.children.props.type)}
 
     </Fragment>
 
