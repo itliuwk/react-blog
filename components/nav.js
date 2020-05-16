@@ -22,10 +22,9 @@ function Nav() {
         {
             title: '朋友',
             icon: 'xxx',
-            link: '/list',
+            link: '/detail/1',
         },
     ]);
-    console.log(list);
     return (
         <div className='nav'>
             {/*     <Link href='/list'>
@@ -44,8 +43,8 @@ function Nav() {
                     <p className='pl10 sub-text'>导航</p>
                     {
                         list.map((item,idx)=>(
-                            <Link href={item.link}>
-                                <a>
+                            <Link href={item.link} key={idx}>
+                                <a key={idx}>
                                     <div key={idx} className='item'>
                                         {item.title}
                                     </div>

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import '../assets/style/antd.min.css'
+// import '../assets/style/antd.min.css'
 import '../assets/style/reset.css'
 import Header from '../components/header'
 import Nav from '../components/nav'
@@ -31,7 +31,7 @@ export default (props) => (
 
         </div>
 
-        {console.log(props.children.props.type)}
+
 
     </Fragment>
 

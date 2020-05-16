@@ -1,31 +1,26 @@
 /**
  * Created with Cocos2d-x3.0 jsb.
  * User: liuwk
- * Date: 2020-05-15' 0015
- * Time: 14:14:51
+ * Date: 2020-05-16' 0016
+ * Time: 18:03:29
  *
  */
 
-import React from "react";
-import Link from 'next/link';
-import Layout from '../../components/Layout'
 
-const PostLink = props => (
-    <li>
-        <Link href="/detail/[id]" as={`/detail/${props.id}`}>
-            <a>{props.id}</a>
-        </Link>
-    </li>
-);
-
-export default function Blog() {
+const BlogList = props => {
     return (
-        <Layout title='列表'>
+        <div>
             <ul>
-                <PostLink id="hello-nextjs"/>
-                <PostLink id="learn-nextjs"/>
-                <PostLink id="deploy-nextjs"/>
+                {
+                    props.lists.map((item,idx)=>{
+                        <li key={idx}>{item.title}</li>
+                    })
+                }
             </ul>
-        </Layout>
-    );
-}
+        </div>
+    )
+};
+
+
+
+export default BlogList;
