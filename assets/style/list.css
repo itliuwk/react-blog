@@ -1,0 +1,49 @@
+
+.list .item {
+    margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 1px 1px 5px 5px rgba(17, 150, 196, 0.35);
+    border-radius: 15px;
+}
+
+.list .item img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.item .item-info {
+    padding: 20px;
+}
+
+.col5 {
+    display: flex;
+}
+
+.list .item .col5 img {
+    height: 200px;
+    width: 250px;
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.list .item .col5 > div {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.item-info p {
+    margin: 10px 0;
+}
+
+.text-ellipsis {
+    border-top: 1px solid #dee5e7;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+.text-ellipsis span{
+    margin-right: 50px;
+}

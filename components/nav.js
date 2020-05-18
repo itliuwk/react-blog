@@ -20,9 +20,9 @@ function Nav() {
             link: '/',
         },
         {
-            title: '朋友',
+            title: '列表',
             icon: 'xxx',
-            link: '/detail/1',
+            link: '/list',
         },
     ]);
     return (

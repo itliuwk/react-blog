@@ -1,6 +1,5 @@
 
 body, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
-    font-weight: 400;
     margin: 0;
     padding: 0;
 }
@@ -22,8 +21,8 @@ select {
     font-size: 14px;
 }
 
-a{
-    color: #333333!important;
+a {
+    color: #333333 !important;
 }
 
 table {
@@ -99,6 +98,64 @@ q:before, q:after, blockquote:before, blockquote:after {
     background-color: #cccccc !important;
 }
 
+/*对 markdown 样式的补充*/
+pre {
+    display: block;
+    padding: 10px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #abb2bf;
+    background: #282c34;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    /* margin-bottom: 1em; */
+}
+
+strong {
+    font-weight: bold;
+}
+
+p > code:not([class]) {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+
+p img {
+    /* 图片居中 */
+    margin: 0 auto;
+    display: flex;
+}
+
+#content {
+    font-family: "Microsoft YaHei", 'sans-serif';
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#content .desc ul, #content .desc ol {
+    color: #333333;
+    margin: 1.5em 0 0 25px;
+}
+
+#content .desc h1, #content .desc h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#content .desc a {
+    color: #009a61;
+}
+
+
 #__next {
     height: auto;
     width: 100%;
@@ -138,7 +195,6 @@ q:before, q:after, blockquote:before, blockquote:after {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    background: #fff;
     margin-top: 20px;
 }
 
@@ -194,5 +250,9 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 .p10 {
     padding: 10px;
+}
+
+.text-muted {
+    color: #98a6ad;
 }
 
