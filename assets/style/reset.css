@@ -172,7 +172,7 @@ p img {
 }
 
 .main .main-left {
-    width: calc(100% - 300px);
+    width: calc(100% - 350px);
     position: relative;
     display: inline-block;
 }
@@ -199,12 +199,32 @@ p img {
 }
 
 .main .main-right {
-    width: 300px;
+    width: 350px;
     display: inline-block;
     background: #f9f9f9;
     z-index: 98;
     min-height: 500px;
 }
+
+
+.ant-spin-nested-loading > div:nth-child(1) {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.ant-spin-nested-loading > div > .ant-spin {
+    max-height: none;
+}
+
+.ant-spin-nested-loading .ant-spin-container{
+    width: 100%!important;
+    height: 100%!important;
+    position: relative!important;
+}
+
 
 .fw {
     font-weight: bold;

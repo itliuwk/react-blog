@@ -16,14 +16,24 @@ function Nav() {
     const [list, setlist] = useState([
         {
             title: '首页',
-            icon: 'xxx',
+            icon: 'icon-shouye',
             link: '/',
         },
         {
-            title: '列表',
-            icon: 'xxx',
-            link: '/list',
+            title: '工具',
+            icon: 'icon-gongju',
+            link: '/tools',
         },
+        {
+            title: '微语',
+            icon: 'icon-aixin',
+            link: '/whisper',
+        },
+        {
+            title: '关于',
+            icon: 'icon-guanyu',
+            link: '/about',
+        }
     ]);
     return (
         <div className='nav'>
@@ -42,11 +52,12 @@ function Nav() {
                 <div className='items'>
                     <p className='pl10 sub-text'>导航</p>
                     {
-                        list.map((item,idx)=>(
+                        list.map((item, idx) => (
                             <Link href={item.link} key={idx}>
                                 <a key={idx}>
                                     <div key={idx} className='item'>
-                                        {item.title}
+                                        <i className={`iconfont ${item.icon}`}></i>
+                                        <span> {item.title}</span>
                                     </div>
                                 </a>
                             </Link>
@@ -57,7 +68,17 @@ function Nav() {
                 </div>
             </div>
             <div className='bottom'>
-                234
+                <div>
+                    <p><i className={`iconfont icon-guanli`}></i></p>
+                    管理
+                </div>
+                <div>
+                    <p><i className={`iconfont icon-rss`}></i></p>文章
+                </div>
+                <div>
+                    <p><i className={`iconfont icon-pinglun`}></i></p>
+                    评论
+                </div>
             </div>
         </div>
     );

@@ -22,6 +22,7 @@ const Layout = props => {
             <Head>
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
                 <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet"/>
+                <link href="//at.alicdn.com/t/font_1826411_9uodxo52yfe.css" rel="stylesheet"/>
                 <meta charSet='utf-8'/>
                 <title>{props.title || '首页'}</title>
             </Head>

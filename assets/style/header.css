@@ -24,4 +24,6 @@
 
 .header .right {
     width: 400px;
+    text-align: right;
+    padding-left: 20px;
 }

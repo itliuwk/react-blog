@@ -64,12 +64,12 @@ class Index extends Component {
                         this.state.lists.map((item, idx) => (
                             <li key={idx} className='item' style={item.isState ? over : out}>
                                 {
-                                    idx % 2 == 0 && <div>
+                                    idx % 2 == 0 && <div onMouseOver={this.handleMouseOver.bind(this, idx)}
+                                                         onMouseOut={this.handleMouseOut.bind(this)}>
                                         <Link href="/detail/[id]" as={`/detail/${item.id}`} key={idx}>
                                             <a>
-                                                <img src={item.url} onMouseOver={this.handleMouseOver.bind(this, idx)}
-                                                     onMouseOut={this.handleMouseOut.bind(this)}
-                                                     style={item.isState ? over : out} alt=""/>
+                                                <img src={item.url}
+                                                     alt=""/>
                                             </a>
                                         </Link>
                                         <div className='item-info'>

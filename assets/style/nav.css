@@ -29,11 +29,22 @@
 
 .nav .item {
     padding-left: 20px;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 15px;
     color: #98a6ad;
+}
+
+.nav .item span {
+    overflow: hidden;
+}
+
+.nav .item .iconfont {
+    font-size: 16px;
+    margin-right: 10px;
+    width: 20px;
+    display: inline-block;
 }
 
 .nav .item:hover {
@@ -48,4 +59,16 @@
     height: 50px;
     width: 100%;
     background: #fff;
+}
+
+.nav .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .bottom > div {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
 }

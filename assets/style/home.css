@@ -1,3 +1,89 @@
 .home {
-    height: 100%;
+
+}
+
+
+.personal {
+    position: relative;
+    box-shadow: 10px 0 10px 0 rgba(37, 45, 51, 0.5);
+}
+.personal h3 {
+    padding: 20px 0 10px 20px;
+    font-size: 16px;
+    color: #188ae2;
+    margin: 0;
+}
+.personal .info {
+    text-align: center;
+    text-indent: 2em;
+    font-size: 15px;
+    padding: 10px;
+    color: #999;
+}
+.personal .contact {
+    padding: 20px;
+    text-align: center;
+}
+.personal .contact div {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 10px;
+    border: 1px solid #1f2d3d;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.personal .contact div i {
+    font-size: 20px;
+}
+.personal .contact .weixin {
+    color: #248a34;
+    border: 1px solid #248a34;
+    position: relative;
+}
+.personal .contact .weixin img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -110px;
+    left: 0;
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(37, 45, 51, 0.5);
+}
+.personal .contact .weixin:hover img {
+    opacity: 1;
+    transition-duration: 1s;
+}
+.personal .contact .qq {
+    color: #4e91d1;
+    border: 1px solid #4e91d1;
+}
+.personal .contact .weibo {
+    color: #d28300;
+    border: 1px solid #d28300;
+}
+.personal .statistics {
+    border-top: 1px solid #eee;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    height: 60px;
+    line-height: 25px;
+    bottom: 0;
+    left: 0;
+}
+.personal .statistics div {
+    padding: 5px;
+    flex: 1;
+    border-left: 1px solid #eee;
+    text-align: center;
+    font-size: 14px;
+}
+.personal .statistics div p:nth-child(2) {
+    color: #999;
+}
+.personal .statistics div:nth-child(1) {
+    border: none;
 }
