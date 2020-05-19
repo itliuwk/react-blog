@@ -96,6 +96,9 @@ class Index extends Component {
                                             <span className='text-muted'>
                                                 <i className='iconfont icon-shijian'></i> {item.createtime}
                                             </span>
+                                            <span className='text-muted'>
+                                                     <i className='iconfont icon-yuedu'></i> 阅读({item.count})
+                                            </span>
                                         </div>
                                     </div>
                                 }
@@ -117,12 +120,15 @@ class Index extends Component {
                                                 <p>{item.subtitle}</p>
                                             </div>
                                             <div className='text-ellipsis'>
-                                            <span className='text-muted'>
-                                                <i className='iconfont icon-yonghu'></i> {item.author}
-                                            </span>
                                                 <span className='text-muted'>
-                                                 <i className='iconfont icon-shijian'></i> {item.createtime}
-                                            </span>
+                                                    <i className='iconfont icon-yonghu'></i> {item.author}
+                                                </span>
+                                                <span className='text-muted'>
+                                                     <i className='iconfont icon-shijian'></i> {item.createtime}
+                                                </span>
+                                                <span className='text-muted'>
+                                                     <i className='iconfont icon-yuedu'></i> 阅读({item.count})
+                                                </span>
                                             </div>
                                         </div>
 

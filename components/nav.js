@@ -22,17 +22,20 @@ function Nav() {
         {
             title: '工具',
             icon: 'icon-gongju',
-            link: '/tools',
+            link: 'http://sxitw.cn/tools',
+            target: '_blank'
         },
         {
             title: '微语',
             icon: 'icon-aixin',
-            link: '/whisper',
+            link: 'http://sxitw.cn/whisper',
+            target: '_blank'
         },
         {
             title: '关于',
             icon: 'icon-guanyu',
-            link: '/about',
+            link: 'http://sxitw.cn/about',
+            target: '_blank'
         }
     ]);
     return (
@@ -52,33 +55,46 @@ function Nav() {
                 <div className='items'>
                     <p className='pl10 sub-text'>导航</p>
                     {
-                        list.map((item, idx) => (
-                            <Link href={item.link} key={idx}>
-                                <a key={idx}>
-                                    <div key={idx} className='item'>
-                                        <i className={`iconfont ${item.icon}`}></i>
-                                        <span> {item.title}</span>
-                                    </div>
-                                </a>
-                            </Link>
-
-                        ))
+                        list.map((item, idx) => {
+                            if (item.target) {
+                                return (
+                                    <a href={item.link} key={idx} target={item.target}>
+                                        <div key={idx} className='item'>
+                                            <i className={`iconfont ${item.icon}`}></i>
+                                            <span> {item.title}</span>
+                                        </div>
+                                    </a>
+                                );
+                            }
+                            return (
+                                <Link href={item.link} key={idx}>
+                                    <a key={idx} target={item.target}>
+                                        <div key={idx} className='item'>
+                                            <i className={`iconfont ${item.icon}`}></i>
+                                            <span> {item.title}</span>
+                                        </div>
+                                    </a>
+                                </Link>
+                            )
+                        })
                     }
 
                 </div>
             </div>
             <div className='bottom'>
                 <div>
-                    <p><i className={`iconfont icon-guanli`}></i></p>
-                    管理
+                    <a href="http://sxitw.cn/admin" target='_blank'>
+                        <p><i className={`iconfont icon-guanli`}></i></p>
+                        管理
+                    </a>
                 </div>
-                <div>
-                    <p><i className={`iconfont icon-rss`}></i></p>文章
-                </div>
-                <div>
-                    <p><i className={`iconfont icon-pinglun`}></i></p>
-                    评论
-                </div>
+                {/*<div>*/}
+                {/*<p><i className={`iconfont icon-rss`}></i></p>文章*/}
+                {/*</div>*/}
+                {/*<div>*/}
+                {/*<p><i className={`iconfont icon-pinglun`}></i></p>*/}
+                {/*评论*/}
+                {/*</div>*/}
             </div>
         </div>
     );

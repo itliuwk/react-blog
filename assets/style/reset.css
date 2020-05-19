@@ -190,6 +190,10 @@ p img {
     font-size: 30px;
 }
 
+.main-header p {
+    margin: 10px 0;
+}
+
 
 .main .main-left .content {
     width: 100%;
