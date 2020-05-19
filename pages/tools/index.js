@@ -12,7 +12,7 @@ class Index extends Component {
     render() {
         return (
             <Fragment>
-                <Layout tile="工具">
+                <Layout title="工具 - 刘伟坤 - 个人博客">
                     工具
                 </Layout>
             </Fragment>

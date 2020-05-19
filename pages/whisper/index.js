@@ -12,7 +12,7 @@ class Index extends Component {
     render() {
         return (
             <Fragment>
-                <Layout tile="微语">
+                <Layout title="微语 - 刘伟坤 - 个人博客">
                     微语
                 </Layout>
             </Fragment>

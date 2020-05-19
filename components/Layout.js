@@ -17,6 +17,10 @@ const Layout = props => {
         setloading(true)
     });
 
+    Router.events.off('routeChangeStart  ', () => {
+        setloading(false)
+    });
+
     return (
         <Fragment>
             <Head>
@@ -24,7 +28,7 @@ const Layout = props => {
                 <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet"/>
                 <link href="//at.alicdn.com/t/font_1826411_9uodxo52yfe.css" rel="stylesheet"/>
                 <meta charSet='utf-8'/>
-                <title>{props.title || '首页'}</title>
+                <title>{props.title || '刘伟坤 - 个人博客'}</title>
             </Head>
             <Header/>
             <Nav/>

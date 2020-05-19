@@ -9,6 +9,9 @@
 import React, {Component} from 'react';
 import Link from 'next/link'
 import '../assets/style/list.css'
+import {Pagination} from 'antd';
+import Router from 'next/router'
+
 
 class Index extends Component {
 
@@ -16,7 +19,7 @@ class Index extends Component {
         super(props);
         this.state = {
             isState: false,
-            ...props
+            ...props,
         }
     }
 
@@ -43,6 +46,10 @@ class Index extends Component {
         });
     }
 
+    onChange(page) {
+        Router.push('/page/' + page);
+    }
+
     render() {
         const over = {
             transform: 'scale(1.05)',
@@ -57,9 +64,10 @@ class Index extends Component {
             transitionDuration: '1s',
         };
 
+
         return (
             <div className='list'>
-                <ul>
+                {this.state.lists.length && <ul>
                     {
                         this.state.lists.map((item, idx) => (
                             <li key={idx} className='item' style={item.isState ? over : out}>
@@ -83,39 +91,40 @@ class Index extends Component {
                                         </div>
                                         <div className='text-ellipsis'>
                                             <span className='text-muted'>
-                                                {item.author}
+                                                <i className='iconfont icon-yonghu'></i> {item.author}
                                             </span>
                                             <span className='text-muted'>
-                                                {item.createtime}
+                                                <i className='iconfont icon-shijian'></i> {item.createtime}
                                             </span>
                                         </div>
                                     </div>
                                 }
                                 {
-                                    idx % 2 == 1 && <div className='col5' onMouseOver={this.handleMouseOver.bind(this, idx)}
-                                                         onMouseOut={this.handleMouseOut.bind(this)}>
+                                    idx % 2 == 1 &&
+                                    <div className='col5' onMouseOver={this.handleMouseOver.bind(this, idx)}
+                                         onMouseOut={this.handleMouseOut.bind(this)}>
 
                                         <img src={item.url} alt=""/>
 
-                                       <div>
-                                           <div className='item-info'>
-                                               <Link href="/detail/[id]" as={`/detail/${item.id}`} key={idx}>
-                                                   <a>
-                                                       <p className='fw'>{item.title}</p>
-                                                   </a>
-                                               </Link>
+                                        <div>
+                                            <div className='item-info'>
+                                                <Link href="/detail/[id]" as={`/detail/${item.id}`} key={idx}>
+                                                    <a>
+                                                        <p className='fw'>{item.title}</p>
+                                                    </a>
+                                                </Link>
 
-                                               <p>{item.subtitle}</p>
-                                           </div>
-                                           <div className='text-ellipsis'>
+                                                <p>{item.subtitle}</p>
+                                            </div>
+                                            <div className='text-ellipsis'>
                                             <span className='text-muted'>
-                                                {item.author}
+                                                <i className='iconfont icon-yonghu'></i> {item.author}
                                             </span>
-                                               <span className='text-muted'>
-                                                {item.createtime}
+                                                <span className='text-muted'>
+                                                 <i className='iconfont icon-shijian'></i> {item.createtime}
                                             </span>
-                                           </div>
-                                       </div>
+                                            </div>
+                                        </div>
 
 
                                     </div>
@@ -128,6 +137,25 @@ class Index extends Component {
                     }
 
                 </ul>
+                }
+
+                {!this.state.lists.length && <div className='pageErr'>
+                    {this.props.pageErr}
+                    <style jsx>
+                        {`
+                            .pageErr{
+                                text-align:center;
+                                padding:20px;
+                            }
+                        `}
+                    </style>
+                </div>}
+
+
+                <div className='page'>
+                    <Pagination defaultCurrent={1} current={parseInt(this.props.currPage) || 1} total={this.props.total}
+                                onChange={this.onChange.bind(this)}/>
+                </div>
             </div>
         );
     }

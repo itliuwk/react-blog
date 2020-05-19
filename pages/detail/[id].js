@@ -5,7 +5,6 @@
  * Time: 14:30:30
  *
  */
-import {useRouter} from 'next/router'
 import React from "react";
 import Layout from '../../components/Layout'
 import marked from 'marked';
@@ -27,7 +26,7 @@ const Detail = props => {
     });
 
     return (
-        <Layout title={props.title}>
+        <Layout title={props.detail.title +' - 刘伟坤 - 个人博客'}>
             <div>
                 {
                     <div className="content">
@@ -38,6 +37,18 @@ const Detail = props => {
                                 __html: props.detail.content ? marked(props.detail.content) : null,
                             }}
                         />
+                        <style jsx>
+                            {`
+                            #content{
+
+                                background:#fff;
+                                padding:20px;
+                                margin-bottom:50px;
+                            }
+
+
+                            `}
+                        </style>
                     </div>
                 }
             </div>
@@ -51,7 +62,7 @@ Detail.getInitialProps = async function (context) {
     const res = await fetch(`http://sxitw.cn:8000/api/blog/detail?id=${id}`);
     const show = await res.json();
     return {
-        detail: show.data || {content:'请检查是否路径有错误'},
+        detail: show.data || {content: '请检查是否路径有错误'},
         title: '详情'
     };
 };

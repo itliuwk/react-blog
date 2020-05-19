@@ -44,6 +44,11 @@
     padding: 20px 0;
 }
 
-.text-ellipsis span{
+.text-ellipsis span {
     margin-right: 50px;
+}
+
+.page {
+    margin: 50px 0;
+    text-align: center;
 }

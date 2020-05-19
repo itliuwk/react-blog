@@ -133,6 +133,7 @@ p img {
     /* 图片居中 */
     margin: 0 auto;
     display: flex;
+    max-width: 100%;
 }
 
 #content {
@@ -219,10 +220,10 @@ p img {
     max-height: none;
 }
 
-.ant-spin-nested-loading .ant-spin-container{
-    width: 100%!important;
-    height: 100%!important;
-    position: relative!important;
+.ant-spin-nested-loading .ant-spin-container {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
 }
 
 
@@ -274,5 +275,17 @@ p img {
 
 .text-muted {
     color: #98a6ad;
+}
+
+#__next {
+    width: 1560px;
+    margin: 0 auto;
+}
+
+#__next .header {
+    width: 1560px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 
